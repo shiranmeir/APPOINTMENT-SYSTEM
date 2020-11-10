@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Form, Input, Button, Checkbox, Card, Select } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import "antd/dist/antd.css";
 import "./Login.scss";
 
 const { Option } = Select;
@@ -71,13 +73,15 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="login-form-button"
-          >
-            Log in
-          </Button>
+          <Link className="link" to="/home">
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="login-form-button"
+            >
+              Log in
+            </Button>
+          </Link>
         </Form.Item>
       </Form>
     </Card>

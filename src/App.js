@@ -1,21 +1,20 @@
 import React from "react";
 import { Route, Redirect, Switch, BrowserRouter } from "react-router-dom";
-import "./App.css";
-import Home from "./components/Home/Home.jsx";
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Doctor from "./components/Doctor/Doctor.jsx";
 import Login from "./components/Login/Login.jsx";
+import Home from "./components/Home/Home.jsx";
+import "./App.css";
+
 const App = () => {
   return (
     <div className="app">
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Switch>
-          <Route path="/" component={Home} />
-          <Route exact path="/" component={Home} />
+          <Route path="/home" component={Home} />
+          <Route path="/" component={Login} />
+          <Route exact path="/" component={Login} />
           <Redirect to="/" />
         </Switch>
-      </BrowserRouter> */}
-      <Login />
+      </BrowserRouter>
     </div>
   );
 };
