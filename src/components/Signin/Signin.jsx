@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import { Form, Input, Button, Checkbox, Card, Select } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./Login.scss";
+import "./Signin.scss";
 
 const { Option } = Select;
 
-const Login = () => {
+const Signin = () => {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
   };
 
   return (
-    <Card title="Log In" className="login">
+    <Card title="Sign In" className="signin">
       <Form
         name="normal_login"
         className="login-form"
@@ -82,17 +82,10 @@ const Login = () => {
               Log in
             </Button>
           </Link>
-          <div className="signin-link">
-            Or{" "}
-            <Link className="link" to="/signin">
-              {" "}
-              Sign in{" "}
-            </Link>
-          </div>
         </Form.Item>
       </Form>
     </Card>
   );
 };
 
-export default Login;
+export default Signin;
